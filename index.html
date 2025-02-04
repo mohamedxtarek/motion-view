@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Motion-View</title>
+</head>
+<body>
+
+    <header>
+        <a href="file:///D:/New%20folder/index.html" class="logo">
+            <img src="images/logo.png" />
+        </a>
+        <nav class="navigation">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="main">
+        <div> 
+            <h1>Your next<br>interactive<br>experience</h1>
+            <!-- <h2>Hello, I'm Mohamed Tarek<br><span>Motion Art</span></h2>
+            <h3>I create motion graphics</h3> -->
+            <a href="#projects" class="main-btn">View my work</a>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@motion_view1"><i class="fab fa-tiktok"></i></a>
+                
+                <a href="https://www.facebook.com/profile.php?id=61572971391505"><i class="fab fa-facebook"></i></a>
+
+                <a href="https://www.instagram.com/motion.view1/"><i class="fab fa-instagram"></i></a>
+                <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+            </div>
+        </div>
+
+    </section>
+
+    <section class="cards" id="services">
+        <h2 class="title">Services</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="info">
+                    <h3>Script Writing</h3>
+                    <p>Writing script content for the video in a distinctive marketing way</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="info">
+                    <h3>Video Production</h3>
+                    <p>Drawing and designing graphics, taking into account accuracy and correct colors, followed by animating the graphics and adding effects and voiceover</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div class="info">
+                    <h3>Voiceover</h3>
+                    <p>High-quality audio commentary in wave or MP3. The recording includes hours of editing, mixing, and studio work. The commentary includes classical Arabic or Gulf language</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title">Projects</h2>
+        <div class="content">
+            <div class="project-card">
+                <div class="project-image">
+                    
+                    <!-- <img src="images/work1.jpg" /> -->
+                    <video controls>
+                    <source src="images/work1.mp4" type="video/mp4 ">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production & Voiceover</p>
+                    <strong class="project-title">
+                        <span>Satisfaction</span>
+                        <!-- <a href="#" class="more-details">More details</a> -->
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <!-- <img src="images/work2.jpg" /> -->
+                    <video controls>
+                        <source src="images/work2.mp4" type="video/mp4 ">
+                        </video>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production & Voiceover</p>
+                    <strong class="project-title">
+                        <span>Advertisement for a restaurant</span>
+                        <!-- <a href="#" class="more-details">More details</a> -->
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card"> 
+                <div class="project-image">
+                    
+                    <video controls>
+                        <source src="images/work3.mp4" type="video/mp4 ">
+                        </video>
+
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production</p>
+                    <strong class="project-title">
+                        <span>Palestine</span>
+                        <!-- <a href="#" class="more-details">More details</a> -->
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+
+                    <video controls>
+                        <source src="images/work4.mp4" type="video/mp4 ">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production & Voiceover</p>
+                    <strong class="project-title">
+                        <span>Advertisement for a car workshop</span>
+                        <!-- <a href="#" class="more-details">More details</a> -->
+                    </strong>
+                </div>
+            </div>
+
+
+
+
+
+
+         
+          <script>
+    // إعدادات canvas
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // تحديث حجم canvas ليكون بالحجم الكامل للنافذة
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // خصائص الدائرة
+    let circle = {
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      radius: 50,
+      color: 'blue',
+      dx: 5,  // السرعة الأفقية
+      dy: 4   // السرعة الرأسية
+    };
+    
+    // دالة لرسم الدائرة
+    function drawCircle() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);  // مسح المحتوى القديم
+      ctx.beginPath();
+      ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2, false);
+      ctx.fillStyle = circle.color;
+      ctx.fill();
+      ctx.closePath();
+    }
+    
+    // دالة لتحريك الدائرة
+    function updatePosition() {
+      // تحديث موقع الدائرة
+      circle.x += circle.dx;
+      circle.y += circle.dy;
+      
+      // التحقق من اصطدام الدائرة بالحواف
+      if (circle.x + circle.radius > canvas.width || circle.x - circle.radius < 0) {
+        circle.dx = -circle.dx; // عكس الاتجاه الأفقي
+      }
+      if (circle.y + circle.radius > canvas.height || circle.y - circle.radius < 0) {
+        circle.dy = -circle.dy; // عكس الاتجاه الرأسي
+      }
+    }
+    
+    // دالة التحديث الرئيسية
+    function animate() {
+      drawCircle();
+      updatePosition();
+      requestAnimationFrame(animate);  // إعادة استدعاء الدالة بشكل مستمر
+    }
+    
+    // بدء الأنيميشن
+    animate();
+    
+    // التفاعل مع الماوس
+    canvas.addEventListener('mousemove', function(event) {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      circle.x = mouseX;
+      circle.y = mouseY;
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+            <!-- <div class="project-card">
+                <div class="project-image">
+                    <img src="images/work5.jpg" />
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production</p>
+                    <strong class="project-title">
+                        <span>Dev Books</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/work6.jpg" />
+                </div>
+                <div class="project-info">
+                    <p class="project-category">Script Writing & Video Production</p>
+                    <strong class="project-title">
+                        <span>Internet</span>
+                        <a href="#" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Let's work together</h2>
+        <div class="content">
+            <a href="tel:+201005577526">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <!-- <p>01005577526</p> -->
+                </div>
+            </div> 
+
+            </a>
+
+            <a href="moohamed.tarek2@gmail.com">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <!-- <p>moohamed.tarek2@gmail.com</p> -->
+                </div>
+            </div>
+        </a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <!-- <p class="footer-title">Copyrights @ <span>Mohamed Tarek</span></p> -->
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@motion_view1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572971391505"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/motion.view1/"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+        </div>
+    </footer>
+
+
+ 
+
+</body>
+</html>
